@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="form-input">
+        <label for="">Title</label>
+        <input type="text" name="" id="title"><br>
+    </div>
+
+    <div class="form-input">
+        <label for="">Description</label>
+        <textarea name="" id="description" rows="3"></textarea>
+    </div>
+
+    <div class="form-input">
+        <button>Add Card</button>
+    </div>
+
+    <div id="card-area">
+        <div class="card">
+            <span onclick="this.parentElement.remove()" class="close">&times;</span>
+            <h2>Title here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, impedit. Pariatur totam esse ad
+                excepturi laudantium repellendus dolore, architecto, velit a aut repellat maxime dicta non distinctio
+                assumenda id minima!</p>
+        </div>
+    </div>
+
+    <script type="module" src="./template.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

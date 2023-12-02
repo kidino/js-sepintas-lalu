@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    
+
+    <button onclick="showAlert()">
+        Salam
+    </button>
+    
+
+    <button onclick="showConfirmation()">
+        Klik untuk Pengesahan!
+    </button>
+    
+    <button onclick="showPrompt()">Mohon maklumbalas</button>
+
+    <script>
+
+
+        function showAlert() {
+            alert("Salam perkenalan!");
+        }
+
+
+        function showConfirmation() {
+            var isConfirmed = confirm("Nak teruskan?");
+            if (isConfirmed) {
+                alert("Anda klik OK! Mari teruskan...");
+            } else {
+                alert("Anda klik Cancel. Operasi dibatalkan.");
+            }
+        }
+
+
+        function showPrompt() {
+            var userInput = prompt("Masukkan nama:");
+
+            if (userInput !== null) {
+                alert("Salam, " + userInput );
+            } else {
+                alert("Maklumbalas tidak diterima.");
+            }
+        }
+
+    </script>
+    
+
+</body>
+</html>

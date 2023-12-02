@@ -1,0 +1,20 @@
+ul {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+ul li {
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+ul li span {
+    float: right;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    color: red;
+}

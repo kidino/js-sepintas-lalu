@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styles</title>
+
+    <style>
+
+        .blue-box {
+            height: 300px;
+            width: 300px;
+            border: 5px solid blue;
+            background-color: aquamarine ;
+        }
+
+        .yellow-box {
+            height: 300px;
+            width: 300px;
+            border: 5px solid rgb(255, 242, 0);
+            background-color: rgb(249, 255, 188) ;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box" class="yellow-box">
+
+    </div>
+
+    <button onclick="updateStyles()">Click Me</button>
+
+    <script>
+
+        function updateStyles() {
+            let element = document.querySelector('#box')
+
+            if(element.classList.contains('black')) {
+                element.classList.remove('black');
+                element.style.cssText = 'border: 5px dashed #f00';
+            } else {
+                element.classList.add('black');
+                element.style.cssText = 'border: 5px solid #000';
+            }
+        }
+    </script>
+
+</body>
+</html>

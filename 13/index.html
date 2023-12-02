@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attribut</title>
+</head>
+<body>
+    
+    <input type="checkbox" value="nasi ayam">
+    Nasi Ayam<br>
+    
+    <input type="checkbox" value="mi goreng">
+    Mi Goreng<br>
+    
+    <input type="checkbox" value="nasi lemak">
+    Nasi Lemak<br>
+    
+    <input type="checkbox" value="roti canai">
+    Roti Canai<br>
+    
+    <button onclick="dapatkanPesanan()">Dapatkan Pesanan</button>
+
+    <div id="pesanan"></div>
+
+
+    <script>
+
+        function dapatkanPesanan() {
+            let senarai_pesanan = document
+            .querySelectorAll('input[type=checkbox]:checked');
+
+            let pesanan_baru = [];
+
+            senarai_pesanan.forEach(function(item){
+                // console.log(item.value)
+                pesanan_baru.push( item.value )
+            })
+
+            document.getElementById('pesanan').innerText = pesanan_baru.join(', ')
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="alert('Saya diklik')">CLICK ME</button>
+
+    <button id="special-btn">SPECIAL BUTTON</button>
+
+    <button id="byid-btn">Button getElementById</button>
+
+    <p>&nbsp;</p>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>NAMA</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iszuddin</td>
+                <td><button>HAPUS</button></td>
+            </tr>
+            <tr>
+                <td>Azman</td>
+                <td><button>HAPUS</button></td>
+            </tr>
+            <tr>
+                <td>Siti</td>
+                <td><button>HAPUS</button></td>
+            </tr>
+            <tr>
+                <td>Harun</td>
+                <td><button>HAPUS</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        let sp_btn = document.getElementById('special-btn') 
+
+        sp_btn.onclick = function(){
+            alert("Special Button was Clicked")
+        }
+
+        let byid_btn = document.getElementById('byid-btn')
+
+        byid_btn.addEventListener("click", function(){
+
+            alert("By ID Button")
+        })
+
+        let table = document.querySelector('table tbody')
+
+        table.addEventListener("click", function(event){
+            if(event.target.tagName == 'BUTTON') {
+                var nama = event.target.parentElement.parentElement.children[0].textContent
+
+                alert(nama)
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>
